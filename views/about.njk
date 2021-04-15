@@ -1,0 +1,26 @@
+{% extends "layout.njk" %}
+
+    {% block head %}
+        <title>Community - About</title>
+    {% endblock %}
+
+{% block content %}
+
+    <div id="wrapper">
+        <img src="{{ about.image_logo }}" alt="Community">
+        <h1>{{ about.title }}</h1>
+        <p>{{ about.description }}</p>
+        <ul>
+            {% for list in about.list %}
+                <li>{{ list.stack }}</li>
+            {% endfor %}
+        </ul>         
+    </div>
+
+    <div id="link" class="links-footer">
+        {% for link in about.link %}
+            <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}
