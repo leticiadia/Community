@@ -1,0 +1,65 @@
+{% extends "layout.njk" %}
+
+    {% block head %}
+        <title>Community - Teachers</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% endblock %}
+
+{% block content %}
+   <form class="card-teachers" method="POST" action="/teachers">
+       <section class="avatar" style="background: url(https://source.unsplash.com/collection/3332031/500x500) no-repeat center center / cover"></section>
+       <section class="details">
+           <h3>New Teacher</h3>
+
+            <div class="item">
+               <div>Avatar URL</div>
+               <div>
+                   <input type="url" name="avatar_url" placeholder="https://">
+               </div>
+           </div>
+
+           <div class="item">
+               <div>Teachers</div>
+               <div>
+                   <input type="text" name="name" placeholder="Teacher's name">
+               </div>
+           </div>
+
+           <div class="item">
+               <div>Birth Date</div>
+               <div>
+                   <input type="date" name="birth">
+               </div>
+           </div>
+
+           <div class="item">
+               <div>Educational Level</div>
+               <div>
+                   <select name="education_level">
+                       <option value="Complete High School">Complete High School</option>
+                       <option value="Complete Higher Education">Complete Higher Education</option>
+                       <option value="Master's">Master's</option>
+                       <option value="Doctorate">Doctorate</option>
+                   </select>
+               </div>
+           </div>
+
+           <div class="item">
+               <div>Type of Class</div>
+               <div>
+                   <span><input type="radio" name="type_class" value="D" checked>Distance</span>
+                   <span><input type="radio" name="type_class" value="P">Presence</span>
+               </div>
+           </div>
+
+           <div class="item">
+               <div>Occupation Area</div>
+               <div>
+                   <input type="text" name="services" placeholder="Separate for comma">
+               </div>  
+           </div>
+
+           <button type="submit">Salvar</button>
+       </section>
+   </form>
+{% endblock %}

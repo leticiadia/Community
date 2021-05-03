@@ -1,0 +1,14 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Leticia",
+      "avatar_url": "https://www.rocketseat.com",
+      "birth": 1621987200000,
+      "education_level": "Complete Higher Education",
+      "type_class": "D",
+      "services": "Frontend Developer",
+      "created_at": 1620078245830
+    }
+  ]
+}
