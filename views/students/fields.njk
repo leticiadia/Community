@@ -1,0 +1,53 @@
+    <div class="item">
+        <div>Avatar URL</div>
+        <div>
+            <input type="url" name="avatar_url" placeholder="https://" value="{{ student.avatar_url }}">
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Name</div>
+        <div>
+            <input type="text" name="name" value="{{ student.name }}">
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Email</div>
+        <div>
+            <input type="email" name="email" value="{{ student.email }}">
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Birth Date</div>
+        <div>
+            <input type="date" name="birth" value="{{ student.birth }}">
+        </div>
+    </div>
+
+    <div class="item">
+        <div>School Year</div>
+        <div>
+            <select name="school_year" value="{{ student.school_year }}">
+                <option value="5th Grade" {% if student.school_year == '5th Grade'%}selected{% endif %}>5th Grade</option>
+                <option value="6th Grade" {% if student.school_year == '6th Grade'%}selected{% endif %}>6th Grade</option>
+                <option value="7th Grade" {% if student.school_year == '7th Grade'%}selected{% endif %}>7th Grade</option>
+                <option value="8th Grade" {% if student.school_year == '8th Grade'%}selected{% endif %}>8th Grade</option>
+                <option value="9th Grade/Freshman" {% if student.school_year == '9th Grade/Freshman'%}selected{% endif %}>9th Grade/Freshman</option>
+                <option value="10th Grade/Sophomore" {% if student.school_year == '10th Grade/Sophomore'%}selected{% endif %}>10th Grade/Sophomore</option>
+                <option value="11th Grade/Junior" {% if student.school_year == '11th Grade/Junior'%}selected{% endif %}>11th Grade/Junior</option>
+                <option value="12th Grade/Senior"{% if student.school_year == '12th Grade/Senior'%}selected{% endif %}>12th Grade/Senior</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Weekly School Hours</div>
+        <div>
+            <input type="number" name="school_hours" value="{{ student.school_hours }}">
+        </div>
+    </div>
+
+    
+    <button type="submit">Save</button>

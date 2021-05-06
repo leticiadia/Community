@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}
+
+    {% block head %}
+        <title>Community</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% endblock %}
+
+{% block content %}
+   <div class="card-teachers">
+       <section class="avatar" style="background: url({{ teacher.avatar_url }}) no-repeat center center / cover"></section>
+       <section class="details">
+           <h3>Details</h3>
+
+           <div class="item">
+               <div>Teacher</div>
+               <div>{{ teacher.name }}</div>
+           </div>
+
+           <div class="item">
+               <div>Age</div>
+               <div>{{ teacher.age }}</div>
+           </div>
+
+           <div class="item">
+               <div>Educational Level</div>
+               <div>{{ teacher.education_level }}</div>
+           </div>
+
+           <div class="item">
+               <div>Type of Class</div>
+               <div>{{'Distance' if teacher.type_class == 'D' else 'Presence' }}</div>
+           </div>
+
+           <div class="item">
+               <div>Accompaniment</div>
+               <div>
+                   {% for service in teacher.services %}
+                        <span>{{ service }}</span>
+                   {% endfor %}
+               </div>
+               
+           </div>
+
+           <div class="item">
+               <div>Since</div>
+               <div>{{ teacher.created_at }}</div>
+           </div>
+
+           <a href="/teachers/{{ teacher.id }}/edit" class="button">Edit</a>
+       </section>
+   </div>
+{% endblock %}

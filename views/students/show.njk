@@ -1,0 +1,44 @@
+{% extends "layout.njk" %}
+
+    {% block head %}
+        <title>Community</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% endblock %}
+
+{% block content %}
+   <div class="card-students">
+       <section class="avatar" style="background: url({{ student.avatar_url }}) no-repeat center center / cover"></section>
+       <section class="details">
+           <h3>Details</h3>
+
+           <div class="item">
+               <div>Student</div>
+               <div>{{ student.name }}</div>
+           </div>
+
+           <div class="item">
+               <div>Age</div>
+               <div>{{ student.email }}</div>
+           </div>
+
+           <div class="item">
+               <div>Birthday</div>
+               <div>{{ student.birth }}</div>
+           </div>
+
+           <div class="item">
+               <div>School Year</div>
+               <div>{{ student.school_year }}</div>
+           </div>
+
+           <div class="item">
+               <div>Weekly School Hours</div>
+               <div>{{ student.school_hours }}</div>
+           </div>
+
+            
+
+           <a href="/students/{{ student.id }}/edit" class="button">Edit</a>
+       </section>
+   </div>
+{% endblock %}

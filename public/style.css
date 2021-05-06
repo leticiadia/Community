@@ -149,7 +149,11 @@ header {
 }
 
 .card {
-    background-color: #C0C0C0;
+    background-color:rgba(11, 202, 11, .9);
+    border-radius: 15px;
+    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.7);
+
+    margin-top: 40px;
 
     display: grid;
     cursor: pointer;
@@ -159,6 +163,7 @@ header {
     width: 300px;
     height: 170px;
     padding-right: 0px;
+    border-radius: 6px;
 }
 
 .card__image-container {
@@ -182,7 +187,7 @@ header {
 }
 
 .card__name {
-    background-color: #C0C0C0;
+    background-color: rgba(11, 202, 11, .9);
     filter: brightness(90%);
     padding: 5px 10px;
     border-radius: 20px;
@@ -271,7 +276,8 @@ iframe {
 }
 
 /* Card - Teachers */
-.card-teachers {
+.card-teachers,
+.card-students {
     background-color: rgba(11, 202, 11, .9);
     width: 800px;
     min-height: 400px;
@@ -298,6 +304,9 @@ iframe {
         opacity: 1;
     }
 }
+
+
+/* DETALHES - SHOW PAGE */
 .avatar{
     border-radius: 10px;
 }
@@ -316,10 +325,11 @@ iframe {
 .details .item {
     border-bottom: 1px solid rgba(0, 0, 0, .1);
     padding: 16px 0;
+
 }
 
-.details .item:last-child{
-    border: none;
+.details .item:last-child  {
+    border-bottom: none;
 }
 
 .details .item div:nth-child(1){
@@ -375,7 +385,8 @@ input::placeholder {
     font-weight: 500;
 }
 
-button[type="submit"]{
+button[type="submit"],
+a.button {
     background-color: #C0C0C0;
     padding: 8px 32px;
     margin-top: 32px;
@@ -390,5 +401,101 @@ button[type="submit"]{
     cursor: pointer;
    
 }
+
+a.button {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: #111;
+    
+}
+
+#form-delete button[type="submit"] {
+    margin-top: 8px;
+    background-color: indianred;
+}
+
+/* PAGE - TEACHERS */
+.table-container{
+    display: block;
+    box-sizing: border-box;
+    padding: 40px;   
+}
+
+.table-container table {
+    border-spacing: 0;
+}
+
+.table-container thead tr th {
+    text-align: left;
+}
+
+td, th {
+    padding: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+th {
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .8);
+    font-size: 14px;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+tbody tr  td:first-child span {
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px black;
+    border: 2px solid white;
+}
+
+tbody tr td:last-child a {
+    background-color: rgba(255, 255, 255, .7);
+    color: black;
+
+    padding: 8px 16px;
+    border-radius: 6px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+   
+}
+
+.table-container > a{
+    background-color: rgba(255, 255, 255, .7);
+    color: black;
+
+    padding: 8px 16px;
+    margin-top: 22px;
+    float: right;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 9px;
+    border-radius: 6px;
+}
+
+.table-container thead tr th:last-child,
+td:last-child {
+    text-align: center;
+}
+
 
 

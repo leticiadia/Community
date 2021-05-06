@@ -1,0 +1,49 @@
+    <div class="item">
+        <div>Avatar URL</div>
+        <div>
+            <input type="url" name="avatar_url" placeholder="https://" value="{{ teacher.avatar_url }}">
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Teachers</div>
+        <div>
+            <input type="text" name="name" placeholder="Teacher's name" value="{{ teacher.name }}">
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Birth Date</div>
+        <div>
+            <input type="date" name="birth" value="{{ teacher.birth }}">
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Educational Level</div>
+        <div>
+            <select name="education_level" value="{{ teacher.education_level }}">
+                <option value="Complete High School" {% if teacher.education_level == 'Complete High School'%}selected{% endif %}>Complete High School</option>
+                <option value="Complete Higher Education" {% if teacher.education_level == 'Complete Higher Education'%}selected{% endif %}>Complete Higher Education</option>
+                <option value="Masters" {% if teacher.education_level == 'Masters'%}selected{% endif %}>Master's</option>
+                <option value="Doctorate" {% if teacher.education_level == 'Doctorate'%}selected{% endif %}>Doctorate</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Type of Class</div>
+        <div>
+            <span><input type="radio" name="type_class" value="D" {% if teacher.type_class == 'D' %} checked {% endif %}>Distance</span>
+            <span><input type="radio" name="type_class" value="P" {% if teacher.type_class == 'P' %} checked {% endif %}>Presence</span>
+        </div>
+    </div>
+
+    <div class="item">
+        <div>Occupation Area</div>
+        <div>
+            <input type="text" name="services" placeholder="Separate for comma" value="{{ teacher.services }}">
+        </div>  
+    </div>
+
+    <button type="submit">Save</button>

@@ -1,49 +1,34 @@
 {% extends "layout.njk" %}
 
     {% block head %}
-        <title>Community - Teachers</title>
+        <title>Community</title>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     {% endblock %}
 
 {% block content %}
-   <div class="card-teachers">
-       <section class="avatar" style="background: url(https://source.unsplash.com/collection/3332031/500x500) no-repeat center center / cover"></section>
-       <section class="details">
-           <h3>Details</h3>
+   <div class="card-teachers table-container">
+       <table width="100%">
+           <thead>
+               <tr>
+                   <th>Teachers</th>
+                   <th>Service</th>
+                   <th>Type Class</th>
+                   <th>Action</th>
+               </tr>
+           </thead>
 
-           <div class="item">
-               <div>Teachers</div>
-               <div>Guilerme Santos</div>
-           </div>
+           <tbody>
+             {% for teacher in teachers %}
+               <tr>
+                   <td><span style="background-image: url({{ teacher.avatar_url }})"></span>{{ teacher.name }}</td>
+                   <td>{{ teacher.services }}</td>
+                   <td>{{ 'Distance' if teacher.type_class == 'D' else 'Presence' }}</td>
+                   <td><a href="/teachers/{{ teacher.id }}">View</a></td>
+               </tr>
+             {% endfor %}
+           </tbody>
+       </table>
 
-           <div class="item">
-               <div>Age</div>
-               <div>35</div>
-           </div>
-
-           <div class="item">
-               <div>Educational Level</div>
-               <div>Doctorate</div>
-           </div>
-
-           <div class="item">
-               <div>Type of Class</div>
-               <div>Distance</div>
-           </div>
-
-           <div class="item">
-               <div>Accompaniment</div>
-               <div>
-                    <span>Math</span>
-                    <span>Physical</span>
-               </div>
-               
-           </div>
-
-           <div class="item">
-               <div>Since</div>
-               <div>03/05/21</div>
-           </div>
-       </section>
+       <a href="/teachers/create">+ New Teacher</a>
    </div>
 {% endblock %}
