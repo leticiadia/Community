@@ -35,22 +35,10 @@ routes.get('/about', function(req, res){
 })
 
 routes.get('/studywithme', function(req, res){
-    return res.render('studywithme', { items: videos })
+    return res.render('studywithme')
 })
 
-routes.get("/video", function(req, res){
-    const id = req.query.id
 
-    const video = videos.find(function(video){
-        return video.id == id
-    })
-
-    if(!video){
-        return res.send("Video not found!")
-    }
-
-    return res.render('video', { item: video })
-})
 
 
 routes.get('/teachers', teachers.index)

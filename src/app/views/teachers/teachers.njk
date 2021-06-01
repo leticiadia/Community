@@ -13,6 +13,7 @@
                    <th>Teachers</th>
                    <th>subjects Taught</th>
                    <th>Type Class</th>
+                   <th>Students</th>
                    <th>Action</th>
                </tr>
            </thead>
@@ -23,6 +24,7 @@
                    <td><span style="background-image: url({{ teacher.avatar_url }})"></span>{{ teacher.name }}</td>
                    <td>{{ teacher.subjects_taught }}</td>
                    <td>{{ 'Distance' if teacher.class_type == 'D' else 'Presence' }}</td>
+                   <td>{{ teacher.total_students }}</td>
                    <td><a href="/teachers/{{ teacher.id }}">View</a></td>
                </tr>
              {% endfor %}
