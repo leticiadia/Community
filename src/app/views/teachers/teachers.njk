@@ -11,7 +11,7 @@
            <thead>
                <tr>
                    <th>Teachers</th>
-                   <th>Service</th>
+                   <th>subjects Taught</th>
                    <th>Type Class</th>
                    <th>Action</th>
                </tr>
@@ -21,8 +21,8 @@
              {% for teacher in teachers %}
                <tr>
                    <td><span style="background-image: url({{ teacher.avatar_url }})"></span>{{ teacher.name }}</td>
-                   <td>{{ teacher.services }}</td>
-                   <td>{{ 'Distance' if teacher.type_class == 'D' else 'Presence' }}</td>
+                   <td>{{ teacher.subjects_taught }}</td>
+                   <td>{{ 'Distance' if teacher.class_type == 'D' else 'Presence' }}</td>
                    <td><a href="/teachers/{{ teacher.id }}">View</a></td>
                </tr>
              {% endfor %}

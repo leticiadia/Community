@@ -34,15 +34,15 @@
     <div class="item">
         <div>Type of Class</div>
         <div>
-            <span><input type="radio" name="type_class" value="D" {% if teacher.type_class == 'D' %} checked {% endif %}>Distance</span>
-            <span><input type="radio" name="type_class" value="P" {% if teacher.type_class == 'P' %} checked {% endif %}>Presence</span>
+            <span><input type="radio" name="class_type" value="D" {% if teacher.class_type == 'D' %} checked {% endif %}>Distance</span>
+            <span><input type="radio" name="class_type" value="P" {% if teacher.class_type == 'P' %} checked {% endif %}>Presence</span>
         </div>
     </div>
 
     <div class="item">
         <div>Occupation Area</div>
         <div>
-            <input type="text" name="services" placeholder="Separate for comma" value="{{ teacher.services }}">
+            <input type="text" name="subjects_taught" placeholder="Separate for comma" value="{{ teacher.subjects_taught }}">
         </div>  
     </div>
 

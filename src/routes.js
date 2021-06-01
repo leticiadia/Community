@@ -1,7 +1,7 @@
 const express = require('express')
-const videos = require('./data')
-const teachers = require('./controllers/teachers')
-const students = require('./controllers/students')
+//const videos = require('./data')
+const teachers = require('./app/controllers/teachers')
+const students = require('./app/controllers/students')
 const routes = express.Router()
 
 
