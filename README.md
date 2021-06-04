@@ -3,12 +3,10 @@
 - [Technology Utilizated](#-technology-utilizated)
 - [How to download the project](#-how-to-download-the-project)
 
----
 
 ## 📝 About
 The **Community** project is a site that emerged within the **Bootcamp LaunchBase**, but underwent changes during the development process until reaching the final goal that is to become a place of study for students from all over the world. 
 
----
 
 ## 🚀 Technology Utilizated
 The project was developed using the following technologies:
@@ -22,7 +20,6 @@ The project was developed using the following technologies:
 - [PostgreSQL](https://www.postgresql.org/)
 - [browser-sync](https://browsersync.io/docs)
 
----
 
 ## 📁 How to download the project
 ```bash
