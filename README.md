@@ -3,8 +3,7 @@
 - [Technology Utilizated](#-technology-utilizated)
 - [How to download the project](#-how-to-download-the-project)
 
-
-
+---
 
 ## 📝 About
 The **Community** project is a site that emerged within the **Bootcamp LaunchBase**, but underwent changes during the development process until reaching the final goal that is to become a place of study for students from all over the world. 
@@ -14,10 +13,14 @@ The **Community** project is a site that emerged within the **Bootcamp LaunchBas
 ## 🚀 Technology Utilizated
 The project was developed using the following technologies:
 
-- [HTML5](https://www.w3schools.com/html/)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
 - [CSS3](https://www.w3schools.com/css/)
 - [JavaScript](https://www.javascript.com/)
-
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+- [nodemon](https://www.npmjs.com/package//nodemon)
+- [PostgreSQL](https://www.postgresql.org/)
+- [browser-sync](https://browsersync.io/docs)
 
 ---
 
@@ -36,6 +39,5 @@ The project was developed using the following technologies:
     $ yarn start
 
 ```
-
 ---
-Developed 👩‍💻 by Leticia Dias
+Developed 👩‍💻💜 by Leticia Dias
