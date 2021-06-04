@@ -387,7 +387,7 @@ input::placeholder {
 
 button[type="submit"],
 a.button {
-    background-color: #C0C0C0;
+    background-color: #eee;
     padding: 8px 32px;
     margin-top: 32px;
     width: 100%;
@@ -497,5 +497,38 @@ td:last-child {
     text-align: center;
 }
 
+/* FILTERS */
+.table-container .header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.table-container .header a {
+    margin: 0;
+    width: 120px;
+    height: 40px;
+
+    font-weight: 600;
+}
 
 
+.table-container .header form {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    grid-gap: 8px;
+}
+.table-container .header form input {
+    border: 1px solid #eee;
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+
+.table-container .header button {
+    margin: 0;
+    height: 40px;
+
+    font-weight: 600;
+}
